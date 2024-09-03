@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block banner-slider %}
+ <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/banners/b1.jpg' %}" class="d-block w-100" alt="img">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banners/b2.jpg' %}" class="d-block w-100" alt="img">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banners/b3.jpg' %}" class="d-block w-100" alt="img">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banners/b4.jpg' %}" class="d-block w-100" alt="img">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+ </div>
+<br>
+{% endblock banner-slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-dark text-center p-5 text-warning border-bottom shadow">
+        <h1> ABOUT TECHPRO </h1>
+        <small class="fs-5"> Our site mainly focus on the tech products and gadgets <br> also 
+         we offer wide range of tech products for discounted prices.</small>
+    </div>
+</div>
+{% endblock information %} 
+
+
+{% block main-content %}
+<br>
+    <div class="container">
+        <h2 class="text-center"> OUR PRODUCTS </h2>
+        <br><br>
+        <div class="row container">
+         <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+            data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+            <div class="smartphone smbg">
+                <a href="{% url 'category' 'P' %}">
+                   <div class="goodnesssecount text-center">
+                    <img src="{% static 'images/product/sphone.png' %}"
+                    class="img-responsive center-block" alt="">
+                    <p class="mlkpro">SMARTPHONES</p>
+                    </div>
+                </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+          data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+          animation-name: none;">
+          <div class="smartwatch smbg">
+              <a href="{% url 'category' 'SW' %}">
+                 <div class="goodnesssecount text-center">
+                  <img src="{% static 'images/product/watch.png' %}"
+                  class="img-responsive center-block" alt="">
+                  <p class="mlkpro">SMARTWATCH</p>
+                  </div>
+              </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+        data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+        animation-name: none;">
+        <div class="earpods smbg">
+            <a href="{% url 'category' 'EP' %}">
+               <div class="goodnesssecount text-center">
+                <img src="{% static 'images/product/searpods.png' %}"
+                class="img-responsive center-block" alt="">
+                <p class="mlkpro">EARPODS</p>
+                </div>
+            </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+      data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+      animation-name: none;">
+      <div class="stablet smbg">
+          <a href="{% url 'category' 'TB' %}">
+             <div class="goodnesssecount text-center">
+              <img src="{% static 'images/product/tabs.png' %}"
+              class="img-responsive center-block " alt="">
+              <p class="mlkpro">TABS</p>
+              </div>
+          </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+    data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+    animation-name: none;">
+    <div class="laptop smbg">
+        <a href="{% url 'category' 'LA' %}">
+           <div class="goodnesssecount text-center">
+            <img src="{% static 'images/product/slaptop.png' %}"
+            class="img-responsive center-block " alt="">
+            <p class="mlkpro">LAPTOP</p>
+            </div>
+        </a>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s"
+  data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s;
+  animation-name: none;">
+  <div class="tv smbg">
+      <a href="{% url 'category' 'TV' %}">
+         <div class="goodnesssecount text-center">
+          <img src="{% static 'images/product/tv.png' %}"
+          class="img-responsive center-block" alt="">
+          <p class="mlkpro">TV</p>
+          </div>
+      </a>
+  </div>
+</div>
+
+  </div>
+ <br><br>
+{% endblock main-content %}    
+
+
+
